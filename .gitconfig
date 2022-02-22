@@ -1,0 +1,23 @@
+[user]
+	email = ben@groovie.org
+	name = Ben Bangert
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIELUw6R73vnBa7hh8EqrcJPUfxWiSI1OkQMeHR0bPCA0
+[core]
+	editor = vim
+	autocrlf = input
+	excludesfile = ~/.gitignore_global
+[push]
+	default = simple
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset - %Cred%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+[commit]
+	gpgsign = true
+	template = ~/.gitmessage
+[gpg "ssh"]
+	allowedSignersFile = ~/.ssh/allowed_signers
+[gpg]
+	format = ssh
+[color]
+	ui = true
+[pull]
+	rebase = false
