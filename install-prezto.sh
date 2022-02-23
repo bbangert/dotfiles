@@ -4,11 +4,10 @@ echo "Installing prezto"
 
 git clone --recursive https://github.com/bbangert/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  mv "${rcfile:t}" "${rcfile:t}.bak"
-done
+# Remove existing zshrc
+rm -f ~/.zshrc ~/.zlogin ~/.zlogout ~/.zpreztorc ~/.zprofile  ~/.zshenv
 
+setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
