@@ -15,7 +15,7 @@ for f in .bashrc .bash_profile .bash_logout; do
 done
 
 # Stow dotfiles
-stow --target="$HOME" --stow git
+stow --target="$HOME" --stow git zsh
 
 
 # Install prezto
@@ -26,5 +26,4 @@ then
   exit
 fi
 
-echo "Install prezto and zsh config via 'zsh ~/dotfiles/install-prezto.sh'"
 zsh ~/dotfiles/install-prezto.sh
