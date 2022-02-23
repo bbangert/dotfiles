@@ -3,6 +3,7 @@
 # Install GNU stow / zsh
 if ! command -v stow >/dev/null @>&1; then
     if command -v apt-get >/dev/null 2>&1; then
+        sudo apt-get update
         sudo apt-get install -y stow zsh
     fi
 fi
