@@ -6,7 +6,7 @@ git clone --recursive https://github.com/bbangert/prezto.git "${ZDOTDIR:-$HOME}/
 
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  mv "$rcfile" "$rcfile.bak"
+  mv "${rcfile:t}" "${rcfile:t}.bak"
 done
 
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
