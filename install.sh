@@ -26,5 +26,5 @@ then
   exit
 fi
 
-# Install prezto
-bash install-prezto.sh
+echo "Install prezto and zsh config via 'zsh ~/dotfiles/install-prezto.sh'"
+zsh ~/dotfiles/install-prezto.sh
