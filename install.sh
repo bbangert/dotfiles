@@ -18,6 +18,13 @@ done
 # Stow dotfiles
 stow --target="$HOME" --stow git zsh
 
+# Download lsd and install it
+if ! command -v lsd >/dev/null 2>&1; then
+    wget https://github.com/Peltoche/lsd/releases/download/0.21.0/lsd_0.21.0_amd64.deb
+    sudo dpkg -i lsd_0.21.0_amd64.deb
+    rm lsd_0.21.0_amd64.deb
+fi
+
 
 # Install prezto
 prezto_dir="$HOME/.zprezto"
