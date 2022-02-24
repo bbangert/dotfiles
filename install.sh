@@ -15,8 +15,11 @@ for f in .bashrc .bash_profile .bash_logout; do
     fi
 done
 
+# Expand compressed binaries
+tar xjvf bin/bin/*.tbz --directory bin/bin/
+
 # Stow dotfiles
-stow --target="$HOME" --stow git zsh
+stow --target="$HOME" --stow bin git zsh
 
 # Download lsd and install it
 if ! command -v lsd >/dev/null 2>&1; then
