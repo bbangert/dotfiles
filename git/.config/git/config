@@ -1,9 +1,9 @@
 [user]
 	email = ben@groovie.org
 	name = Ben Bangert
-	signingkey = 41bcd92a14cb1449ebcc460894bfd43a123e73e869da2be4960630d164f71718
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIELUw6R73vnBa7hh8EqrcJPUfxWiSI1OkQMeHR0bPCA0
 [core]
-	editor = vim
+	editor = code-insiders --wait
 	autocrlf = input
 [push]
 	default = simple
@@ -17,4 +17,4 @@
 [pull]
 	rebase = false
 [gpg]
-	program = bpb
+	format = ssh
