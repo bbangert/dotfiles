@@ -19,7 +19,7 @@ done
 tar xjvf bin/bin/*.tbz --directory bin/bin/
 
 # Stow dotfiles
-stow --target="$HOME" --stow bin git zsh
+stow --target="$HOME" --stow git zsh
 
 # Download lsd and install it
 if ! command -v lsd >/dev/null 2>&1; then
