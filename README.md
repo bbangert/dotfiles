@@ -4,7 +4,6 @@ Set of dotfiles I use for my terminal prompt.
 
 Note that my shell setup assumes the use of [Nerd Fonts](https://www.nerdfonts.com/) for proper icon/glyph display.
 
-
 ## VS Code Automatic Usage
 
 Installed automatically in VS Code when used with [dotfiles setup](https://code.visualstudio.com/docs/devcontainers/containers#_personalizing-with-dotfile-repositories).
@@ -33,3 +32,8 @@ To use the same font family on MacOS:
     "editor.fontFamily": "FiraCodeNerdFontComplete-Retina",
     "terminal.integrated.fontFamily": "FiraCodeNerdFontComplete-Retina",
 ```
+
+## Git Commit Signing
+
+SSH signing is the easiest when using remote shells, as its easy to avoid accidentally
+leaving private keys around.
