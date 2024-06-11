@@ -3,7 +3,7 @@
 	name = Ben Bangert
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIELUw6R73vnBa7hh8EqrcJPUfxWiSI1OkQMeHR0bPCA0
 [core]
-	editor = code-insiders --wait
+	editor = code --wait
 	autocrlf = input
 [push]
 	default = simple
