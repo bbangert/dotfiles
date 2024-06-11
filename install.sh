@@ -15,9 +15,6 @@ for f in .bashrc .bash_profile .bash_logout; do
     fi
 done
 
-# Expand compressed binaries
-tar xjvf bin/bin/*.tbz --directory bin/bin/
-
 # Stow dotfiles
 stow --target="$HOME" --stow git zsh
 
@@ -37,4 +34,4 @@ then
   exit
 fi
 
-zsh ~/dotfiles/install-prezto.sh
+zsh install-prezto.sh
