@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Check architecture
+arch=$(uname -m)
+
 # Install GNU stow / zsh
 if ! command -v stow >/dev/null @>&1; then
     if command -v apt-get >/dev/null 2>&1; then
@@ -20,9 +23,15 @@ stow --target="$HOME" --stow git zsh
 
 # Download lsd and install it
 if ! command -v lsd >/dev/null 2>&1; then
-    wget https://github.com/Peltoche/lsd/releases/download/0.21.0/lsd_0.21.0_amd64.deb
-    sudo dpkg -i lsd_0.21.0_amd64.deb
-    rm lsd_0.21.0_amd64.deb
+    if [ "$arch" = "x86_64" ] ; then
+        wget https://github.com/Peltoche/lsd/releases/download/0.21.0/lsd_0.21.0_amd64.deb
+        sudo dpkg -i lsd_0.21.0_amd64.deb
+        rm lsd_0.21.0_amd64.deb
+    elif [ "$arch" = "aarch64" ] ; then
+        wget https://github.com/lsd-rs/lsd/releases/download/v1.1.2/lsd-musl_1.1.2_arm64_xz.deb
+        sudo dpkg -i lsd-musl_1.1.2_arm64_xz.deb
+        rm lsd-musl_1.1.2_arm64_xz.deb
+    fi
 fi
 
 
