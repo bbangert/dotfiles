@@ -42,7 +42,7 @@ then
   echo "Prezto already installed, exiting installation."
   exit
 fi
-curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 zsh install-prezto.sh
+curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 echo 'eval "$(atuin init zsh)"' >> ~/.zshrc
 echo 'export ATUIN_SYNC_ADDRESS=https://sh.groovie.org' >> ~/.zshrc
